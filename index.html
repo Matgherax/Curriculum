@@ -105,24 +105,33 @@ button:hover {
     <p><input placeholder="00139" oninput="this.className = ''" name="cod_postale"></p>
 
   </div>
-  <div class="tab">Contatti:
-    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-    <p><input placeholder="Telefono..." oninput="this.className = ''" name="phone"></p>
+  <div class="tab">Tipo di ricerca:
+    <p><input placeholder="Occupazione" oninput="this.className = ''" name="Occupazione"></p>
+    <p><input placeholder="Settore professionale" oninput="this.className = ''" name="Set_Professionale"></p>
   </div>
-  <div class="tab">Data di Nascita:
+  <div class="tab">Esperienza Lavorativa:
+    <p><input placeholder="Lavoro 1" oninput="this.className = ''" name="Lavoro"></p>
+    <p><input type="datetime" name="mydatetime"></p>
+    <p><input placeholder="Lavoro 2" oninput="this.className = ''" name="Lavoro"></p>
+    <p><input type="datetime" name="mydatetime"></p>
+    <p><input placeholder="Lavoro 3" oninput="this.className = ''" name="Lavoro"></p>
     <p><input type="datetime" name="mydatetime"></p>
   </div>
-  <div class="tab">Indirizzo:
+  <div class="tab">Istruzione e Formazione:
     <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="uname"></p>
     <p><input placeholder="00139" oninput="this.className = ''" name="pword"></p>
   </div>
-   <div class="tab">Certificazioni:
-     <p><input placeholder="Certificazioni..." oninput="this.className = ''" name="email">
+  <div class="tab">Capacità e competenze personali: <!-- Qua mettiamo anche Ulteriori INFO-->
+    <p><textarea placeholder="Capacità & Competenze Personali"></textarea></p>
+    <p><textarea placeholder="Ulteriori Informazioni..."></textarea></p>
+  </div>
+  <div class="tab">Certificazioni e Allegati:
+    <p><input placeholder="Certificazioni..." oninput="this.className = ''" name="email">
       <label for="files">Select multiple files(only photos): </label>
       <input id="files" type="file" multiple/>
       <button style="float: right;"type="button" onclick="clr()">clear</button>
 	    <output id="result" ><br><br></p>
-  </div>
+  </div><!-- Ora andrebbe la firma ma non so dove metterla-->
   <div style="overflow:auto;">
     <div style="float:right;">
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
