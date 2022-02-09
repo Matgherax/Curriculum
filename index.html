@@ -90,18 +90,26 @@ button:hover {
 <form id="regForm">
   <h1>Curriculum Vitae</h1>
   <!-- One "tab" for each step in the form: -->
-  <div class="tab">Nominativo:
+  <div class="tab">Dati Anagrafici:
+    <label>Nominativo:</label>
     <p><input placeholder="Nome..." oninput="this.className = ''" name="fname"></p>
     <p><input placeholder="Cognome..." oninput="this.className = ''" name="lname"></p>
+    <label>Contatti:</label>
+    <p><input placeholder="Telefono..." oninput="this.className = ''" name="phone"></p>
+    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+    <label>Data di Nascita:</label>
+    <p><input type="datetime" name="mydatetime"></p>
+    <label>Indirizzo:</label>
+    <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="uname"></p>
+    <p><input placeholder="00139" oninput="this.className = ''" name="pword"></p>
+
   </div>
   <div class="tab">Contatti:
     <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
     <p><input placeholder="Telefono..." oninput="this.className = ''" name="phone"></p>
   </div>
   <div class="tab">Data di Nascita:
-    <p><input placeholder="gg" oninput="this.className = ''" name="dd"></p>
-    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-    <p><input placeholder="aaaa" oninput="this.className = ''" name="yyyy"></p>
+    <p><input type="datetime" name="mydatetime"></p>
   </div>
   <div class="tab">Indirizzo:
     <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="uname"></p>
