@@ -11,16 +11,16 @@
   <div class="tab"><h1>Dati Anagrafici:</h1>
     <br><br>
     <label>Nominativo:</label>
-    <p><input placeholder="Nome..." oninput="this.className = ''" name="fname"></p>
-    <p><input placeholder="Cognome..." oninput="this.className = ''" name="lname"></p>
+    <p><input placeholder="Nome..." oninput="this.className = ''" name="nome"></p>
+    <p><input placeholder="Cognome..." oninput="this.className = ''" name="cognome"></p>
     <label>Contatti:</label>
-    <p><input placeholder="Telefono..." oninput="this.className = ''" name="phone"></p>
+    <p><input placeholder="Telefono..." oninput="this.className = ''" name="telefono"></p>
     <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
     <label>Data di Nascita:
-    <p><input type="date" name="mybd"></p></label>
+    <p><input type="date" name="compleanno"></p></label>
     <label>Indirizzo:</label>
-    <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="uname"></p>
-    <p><input placeholder="00139" oninput="this.className = ''" name="cod_postale"></p>
+    <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo"></p>
+    <p><input placeholder="00139" oninput="this.className = ''" name="cap"></p>
   </div>
   <div class="tab"><h1>Tipo di ricerca:</h1>
     <p><input placeholder="Occupazione" oninput="this.className = ''" name="Occupazione"></p>
@@ -35,15 +35,15 @@
     <p><input type="date" name="workdays"></p>
   </div>
   <div class="tab"><h1>Istruzione e Formazione:</h1>
-    <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="uname"></p>
-    <p><input placeholder="00139" oninput="this.className = ''" name="pword"></p>
+    <p><textarea class="texta" placeholder="Formazione" name="corso"></textarea></p>
+    <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo"></p>
   </div>
-  <div class="tab"><h1>Capacità e competenze personali: <!-- Qua mettiamo anche Ulteriori INFO-->
-    <p><textarea class="texta" placeholder="Capacità & Compet</h1>enze Personali"></textarea></p>
+  <div class="tab"><h1>Capacità e competenze personali: </h1><!-- Qua mettiamo anche Ulteriori INFO-->
+    <p><textarea class="texta" placeholder="Capacità & Competenze Personali" name="corso"></textarea></p>
     <p><textarea class="texta" placeholder="Ulteriori Informazioni..."></textarea></p>
   </div>
   <div class="tab"><h1>Certificazioni e Allegati:</h1>
-    <p><input placeholder="Certificazioni..." oninput="this.className = ''" name="email">
+    <p><input placeholder="Certificazioni..." oninput="this.className = ''" name="certificazioni">
       <br><br>
       <label for="files">Select file/s(only photos): </label>
       <input id="files" type="file" multiple/>
