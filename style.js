@@ -122,3 +122,17 @@ function clr(output){
   var myobj = document.getElementById("result");
   myobj.remove();
 }
+
+function checktab{
+  var nome = document.getElementsByName('nome');
+  var cognome = document.getElementsByName('cognome');
+  var telefono = document.getElementsByName('telefono');
+  var email = document.getElementsByName('email');
+  var indirizzo = document.getElementsByName('indirizzo');
+  var cap = document.getElementsByName('cap');
+  var occupazione = document.getElementsByName('occupazione');
+  var set_professionale = document.getElementsByName('set_professionale');
+  var lavoro = document.getElementsByName('lavoro');
+  var corso = document.getElementsByName('corso');
+  var certificazioni = document.getElementsByName('certificazioni');
+}
