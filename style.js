@@ -136,9 +136,3 @@ function checktab(){
   var corso = document.getElementsByName('corso');
   var certificazioni = document.getElementsByName('certificazioni');
 }
-
-function profilo(){
-  var immagine = new Image();
-  immagine.src = y();
-  contesto.drawImage(immagine,0,0);
-}
