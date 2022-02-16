@@ -123,7 +123,7 @@ function clr(output){
   myobj.remove();
 }
 
-function checktab{
+function checktab(){
   var nome = document.getElementsByName('nome');
   var cognome = document.getElementsByName('cognome');
   var telefono = document.getElementsByName('telefono');
