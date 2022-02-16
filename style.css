@@ -74,7 +74,6 @@
   /* Mark the steps that are finished and valid: */
   .step.finish {
     background-color: #003399;
-    opacity: 1;
   }
   
   .cf{
