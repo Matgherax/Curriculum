@@ -71,7 +71,7 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 
-window.onload = function(){
+window.onload = function y(){
         
         //Check File API support
         if(window.File && window.FileList && window.FileReader)
@@ -135,4 +135,10 @@ function checktab(){
   var lavoro = document.getElementsByName('lavoro');
   var corso = document.getElementsByName('corso');
   var certificazioni = document.getElementsByName('certificazioni');
+}
+
+function profilo(){
+  var immagine = new Image();
+  immagine.src = y();
+  contesto.drawImage(immagine,0,0);
 }
