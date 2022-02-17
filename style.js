@@ -47,14 +47,22 @@ function validateForm() {
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    if (y[i].value == "") {
+    if (y[i].value == "" && (y[i].name != "occupazione" || y[i].name != "set_professionale"
+      || y[i].name != "Lavoro" || y[i].name != "workdays" || (y[i].name != "indirizzo" && currentTab != 0) && y[i].name != "Certificazioni")) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
       valid = false;
     }
-  reg = /([0-9]{4})\w/;
-    if (y[i].getElementByName("cap").value == reg) {
+  reg_cap = /([0-9]{4})\w/;
+    if (y[i].getElementByName("cap").value == reg_cap) {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  reg_indirizzo = /([a-z A-Z]{1,21},[0-9])\w/;
+    if (y[i].getElementByName("indirizzo").value == reg_indirizzo) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
