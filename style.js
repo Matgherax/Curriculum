@@ -53,6 +53,12 @@ function validateForm() {
       // and set the current valid status to false
       valid = false;
     }
+    if (y[i].getElementByName("cap").value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
@@ -71,7 +77,7 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 
-window.onload = function y(){
+window.onload = function(){
         
         //Check File API support
         if(window.File && window.FileList && window.FileReader)
