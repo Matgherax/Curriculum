@@ -53,7 +53,8 @@ function validateForm() {
       // and set the current valid status to false
       valid = false;
     }
-    if (y[i].getElementByName("cap").value == "") {
+  reg = /([0-9]{4})\w/;
+    if (y[i].getElementByName("cap").value == reg) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
