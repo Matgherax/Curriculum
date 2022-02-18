@@ -47,8 +47,8 @@ function validateForm() {
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    if (y[i].value == "" && (y[i].name != "occupazione" || y[i].name != "set_professionale"
-      || y[i].name != "Lavoro" || y[i].name != "workdays" || (y[i].name != "indirizzo" && currentTab != 0) && y[i].name != "Certificazioni")) {
+    if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
+      && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "Certificazioni") {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
