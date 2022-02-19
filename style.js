@@ -54,15 +54,15 @@ function validateForm() {
       // and set the current valid status to false
       valid = false;
     }
-   const reg_cap = /([0-9]{4})\w/;
+   const reg_cap = new RegExp('([0-9]{4})\w');
    if (!reg_cap.test(y[i].getAttribute("cap").value)) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
       valid = false;
     }
-    
-   const reg_indirizzo = /([a-z A-Z]{1,21},[0-9])\w/;
+    new RegExp('^[a-z]+$','i'); 
+   const reg_indirizzo = new RegExp('([a-z A-Z]{1,21},[0-9])\w');
    if (!reg_indirizzo.test(y[i].getAttribute("indirizzo").value)) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
