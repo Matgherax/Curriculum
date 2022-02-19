@@ -39,40 +39,28 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
-function c_vuoti(){
-
+function c_vuoti(y){
+  if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
+      && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "Certificazioni" && currentTab != 0) 
+      return c_vuoti();
 }
 
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
+  const reg_cap = new RegExp('([0-9]{4})\w');
+  const reg_indirizzo = new RegExp('([a-z A-Z]{1,21},[ 0-9])\w');
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
-      && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "Certificazioni" && currentTab != 0) {
+    if (c_vuoti(y) && !reg_cap.test(y[i].getAttribute("cap").value) && !reg_indirizzo.test(y[i].getAttribute("indirizzo").value)){
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
       valid = false;
-    }
-   const reg_cap = new RegExp('([0-9]{4})\w');
-   if (!reg_cap.test(y[i].getAttribute("cap").value)) {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
-    }
-    new RegExp('^[a-z]+$','i'); 
-   const reg_indirizzo = new RegExp('([a-z A-Z]{1,21},[ 0-9])\w');
-   if (!reg_indirizzo.test(y[i].getAttribute("indirizzo").value)) {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
-    }
+    }  
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
