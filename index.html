@@ -16,6 +16,12 @@
   </div>
   <div class="content">
     <form id="regForm">
+      <div class="tab"><h1>Foto Personale:</h1>
+        <label for="files">Select file/s(only photos): </label>
+          <input id="files" type="file" name="foto" multiple/>
+          <button style="float: right;"type="button" onclick="clr()">clear</button>
+          <output id="result" ></p><br><br>
+      </div>
       <div class="tab"><h1>Dati Anagrafici:</h1>
         <br><br>
         <label>Nominativo:</label>
@@ -67,6 +73,7 @@
       </div>
       <!-- Circles which indicates the steps of the form: -->
       <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
