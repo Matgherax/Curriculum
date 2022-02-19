@@ -7,68 +7,80 @@
 </head>
 
 <body>
-<form id="regForm">
-  <!--<h1>Curriculum Vitae</h1>
-   One "tab" for each step in the form: -->
-  <div class="tab"><h1>Dati Anagrafici:</h1>
-    <br><br>
-    <label>Nominativo:</label>
-    <p><input placeholder="Nome..." oninput="this.className = ''" onkeydown="this.value = this.value.toUpperCase();" name="nome"></p>
-    <p><input placeholder="Cognome..." oninput="this.className = ''" onkeydown="this.value = this.value.toUpperCase();" name="cognome"></p>
-    <label>Contatti:</label>
-    <p><input placeholder="Telefono..." type="tel" oninput="this.className = ''" name="telefono"></p>
-    <p><input placeholder="E-mail..." type="email" oninput="this.className = ''" onkeydown="this.value = this.value.toLowerCase();" name="email"></p>
-    <label>Data di Nascita:
-    <p><input type="date" name="compleanno"></p></label>
-    <label>Indirizzo:</label>
-    <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo"></p>
-    <p><input placeholder="00139" oninput="this.className = ''" name="cap"></p>
+<div class="container">
+  <div class="header">
+
   </div>
-  <div class="tab"><h1>Tipo di ricerca:</h1>
-    <p><input placeholder="Occupazione" oninput="this.className = ''" name="occupazione"></p>
-    <p><input placeholder="Settore professionale" oninput="this.className = ''" name="set_professionale"></p>
+  <div class="navigation">
+
   </div>
-  <div class="tab"><h1>Esperienza Lavorativa:</h1>
-    <div class="cen"><p class="dis"><input placeholder="Lavoro 1..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
-    <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
-    <div class="cen"><p class="dis"><input placeholder="Lavoro 2..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
-    <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
-    <div class="cen"><p class="dis"><input placeholder="Lavoro 3..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
-    <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
+  <div class="content">
+    <form id="regForm">
+      <div class="tab"><h1>Dati Anagrafici:</h1>
+        <br><br>
+        <label>Nominativo:</label>
+        <p><input placeholder="Nome..." oninput="this.className = ''" onkeydown="this.value = this.value.toUpperCase();" name="nome"></p>
+        <p><input placeholder="Cognome..." oninput="this.className = ''" onkeydown="this.value = this.value.toUpperCase();" name="cognome"></p>
+        <label>Contatti:</label>
+        <p><input placeholder="Telefono..." type="tel" oninput="this.className = ''" name="telefono"></p>
+        <p><input placeholder="E-mail..." type="email" oninput="this.className = ''" onkeydown="this.value = this.value.toLowerCase();" name="email"></p>
+        <label>Data di Nascita:
+        <p><input type="date" name="compleanno"></p></label>
+        <label>Indirizzo:</label>
+        <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo"></p>
+        <p><input placeholder="00139" oninput="this.className = ''" name="cap"></p>
+      </div>
+      <div class="tab"><h1>Tipo di ricerca:</h1>
+        <p><input placeholder="Occupazione" oninput="this.className = ''" name="occupazione"></p>
+        <p><input placeholder="Settore professionale" oninput="this.className = ''" name="set_professionale"></p>
+      </div>
+      <div class="tab"><h1>Esperienza Lavorativa:</h1>
+        <div class="cen"><p class="dis"><input placeholder="Lavoro 1..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
+        <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
+        <div class="cen"><p class="dis"><input placeholder="Lavoro 2..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
+        <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
+        <div class="cen"><p class="dis"><input placeholder="Lavoro 3..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
+        <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
+      </div>
+      <div class="tab"><h1>Istruzione e Formazione:</h1>
+        <p><textarea class="texta" placeholder="Formazione" name="corso"></textarea></p>
+        <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo"></p>
+      </div>
+      <div class="tab"><h1>Capacità e competenze personali: </h1><!-- Qua mettiamo anche Ulteriori INFO-->
+        <p><textarea class="texta" placeholder="Capacità & Competenze Personali" name="corso"></textarea></p>
+        <p><textarea class="texta" placeholder="Ulteriori Informazioni..." name="corso"></textarea></p>
+      </div>
+      <div class="tab"><h1>Certificazioni e Allegati:</h1>
+        <p><input placeholder="Certificazioni..." oninput="this.className = ''" name="certificazioni">
+          <br><br>
+          <label for="files">Select file/s(only photos): </label>
+          <input id="files" type="file" multiple/>
+          <button style="float: right;"type="button" onclick="clr()">clear</button>
+          <output id="result" ></p><br><br>
+      </div><br><br><!-- Ora andrebbe la firma ma non so dove metterla-->
+      <!--se non lo sai te-->
+      <div style="overflow:auto;">
+        <div style="float:right;">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">Indietro</button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">Prossimo</button>
+        </div>
+      </div>
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
   </div>
-  <div class="tab"><h1>Istruzione e Formazione:</h1>
-    <p><textarea class="texta" placeholder="Formazione" name="corso"></textarea></p>
-    <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo"></p>
+  <div class="footer">
+
   </div>
-  <div class="tab"><h1>Capacità e competenze personali: </h1><!-- Qua mettiamo anche Ulteriori INFO-->
-    <p><textarea class="texta" placeholder="Capacità & Competenze Personali" name="corso"></textarea></p>
-    <p><textarea class="texta" placeholder="Ulteriori Informazioni..." name="corso"></textarea></p>
-  </div>
-  <div class="tab"><h1>Certificazioni e Allegati:</h1>
-    <p><input placeholder="Certificazioni..." oninput="this.className = ''" name="certificazioni">
-      <br><br>
-      <label for="files">Select file/s(only photos): </label>
-      <input id="files" type="file" multiple/>
-      <button style="float: right;"type="button" onclick="clr()">clear</button>
-	    <output id="result" ></p><br><br>
-  </div><br><br><!-- Ora andrebbe la firma ma non so dove metterla-->
-	<!--se non lo sai te-->
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Indietro</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Prossimo</button>
-    </div>
-  </div>
-  <!-- Circles which indicates the steps of the form: -->
-  <div style="text-align:center;margin-top:40px;">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-  </div>
-</form>
+</div>
+
 
 <style type="text/css"> @import url(style.css);</style>
 <script type="text/javascript "src="style.js">
