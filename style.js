@@ -54,20 +54,20 @@ function validateForm() {
       // and set the current valid status to false
       valid = false;
     }
-  /*reg_cap = /([0-9]{4})\w/;
+   var reg_cap = /([0-9]{4})\w/;
     if (y[i].getAttribute("cap").value == reg_cap) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
       valid = false;
     }
-  reg_indirizzo = /([a-z A-Z]{1,21},[0-9])\w/;
+   var reg_indirizzo = /([a-z A-Z]{1,21},[0-9])\w/;
     if (y[i].getgetAttribute("indirizzo").value == reg_indirizzo) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
       valid = false;
-    }*/
+    }
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
