@@ -39,11 +39,6 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
-/*function c_vuoti(y){
-  if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
-      && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "Certificazioni" && currentTab != 0) 
-      return c_vuoti();
-}*/
 
 function validateForm() {
   // This function deals with validation of the form fields
@@ -56,7 +51,7 @@ function validateForm() {
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
         if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
-          && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("indirizzo") != "Certificazioni" && y[i].getAttribute("name") != "Certificazioni" && currentTab != 0) {
+          && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "indirizzo" && y[i].getAttribute("name") != "certificazioni" && y[i].getAttribute("indirizzo") != "foto" && currentTab != 0) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
