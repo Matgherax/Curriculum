@@ -84,7 +84,12 @@
   
   .texta{
     width: 100%;
-    height: 200px;
+    height: 150px;
+  }
+  
+  .texta2{
+    width: 100%;
+    height: 75px;
   }
 
   .dis{
