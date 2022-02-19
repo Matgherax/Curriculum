@@ -39,6 +39,10 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
+function c_vuoti(){
+
+}
+
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
@@ -62,7 +66,7 @@ function validateForm() {
       valid = false;
     }
     new RegExp('^[a-z]+$','i'); 
-   const reg_indirizzo = new RegExp('([a-z A-Z]{1,21},[0-9])\w');
+   const reg_indirizzo = new RegExp('([a-z A-Z]{1,21},[ 0-9])\w');
    if (!reg_indirizzo.test(y[i].getAttribute("indirizzo").value)) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
