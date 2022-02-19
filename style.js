@@ -137,7 +137,7 @@ window.onload = function(){
     }
         
     function clr(){
-      var myobj = document.getElementById("files");
+      var myobj = document.getElementById("result");
       myobj.remove();
     }
 
