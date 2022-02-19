@@ -55,14 +55,6 @@ function validateForm() {
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    function validateForm() {
-      // This function deals with validation of the form fields
-      var x, y, i, valid = true;
-      x = document.getElementsByClassName("tab");
-      y = x[currentTab].getElementsByTagName("input");
-      // A loop that checks every input field in the current tab:
-      for (i = 0; i < y.length; i++) {
-        // If a field is empty...
         if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
           && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "Certificazioni" && currentTab != 0) {
           // add an "invalid" class to the field:
@@ -83,7 +75,7 @@ function validateForm() {
           // and set the current valid status to false
           valid = false;
         }*/
-      }
+      
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
@@ -154,16 +146,3 @@ function clr(output){
   myobj.remove();
 }
 
-function checktab(){
-  var nome = document.getElementsByName('nome');
-  var cognome = document.getElementsByName('cognome');
-  var telefono = document.getElementsByName('telefono');
-  var email = document.getElementsByName('email');
-  var indirizzo = document.getElementsByName('indirizzo');
-  var cap = document.getElementsByName('cap');
-  var occupazione = document.getElementsByName('occupazione');
-  var set_professionale = document.getElementsByName('set_professionale');
-  var lavoro = document.getElementsByName('lavoro');
-  var corso = document.getElementsByName('corso');
-  var certificazioni = document.getElementsByName('certificazioni');
-}
