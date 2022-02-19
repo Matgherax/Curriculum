@@ -48,21 +48,22 @@ function validateForm() {
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
     if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
-      && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "Certificazioni") {
+      && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "Certificazioni" && currentTab != 0) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
       valid = false;
     }
    const reg_cap = /([0-9]{4})\w/;
-    if (y[i].getAttribute("cap").value == reg_cap) {
+   if (!reg_cap.test(y[i].getAttribute("cap").value)) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
       valid = false;
     }
+    
    const reg_indirizzo = /([a-z A-Z]{1,21},[0-9])\w/;
-    if (y[i].getgetAttribute("indirizzo").value == reg_indirizzo) {
+   if (!reg_indirizzo.test(y[i].getAttribute("indirizzo").value)) {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false
