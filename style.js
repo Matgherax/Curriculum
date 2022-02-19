@@ -136,8 +136,8 @@ window.onload = function(){
         }
     }
         
-    window.onload = function clr(){
-  var myobj = document.getElementById("files");
-  myobj.remove();
-}
+    function clr(){
+      var myobj = document.getElementById("files");
+      myobj.remove();
+    }
 
