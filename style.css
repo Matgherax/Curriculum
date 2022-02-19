@@ -25,6 +25,7 @@
     font-size: 17px;
     font-family: Raleway;
     border: 1px solid #aaaaaa;
+    background-color: #e6eeff;
   }
   
   /* Mark input boxes that gets an error on validation: */
