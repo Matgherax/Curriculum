@@ -39,11 +39,11 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
-function c_vuoti(y){
+/*function c_vuoti(y){
   if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
       && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "Certificazioni" && currentTab != 0) 
       return c_vuoti();
-}
+}*/
 
 function validateForm() {
   // This function deals with validation of the form fields
@@ -55,12 +55,35 @@ function validateForm() {
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    if (c_vuoti(y) && !reg_cap.test(y[i].getAttribute("cap").value) && !reg_indirizzo.test(y[i].getAttribute("indirizzo").value)){
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
-    }  
+    function validateForm() {
+      // This function deals with validation of the form fields
+      var x, y, i, valid = true;
+      x = document.getElementsByClassName("tab");
+      y = x[currentTab].getElementsByTagName("input");
+      // A loop that checks every input field in the current tab:
+      for (i = 0; i < y.length; i++) {
+        // If a field is empty...
+        if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
+          && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "Certificazioni" && currentTab != 0) {
+          // add an "invalid" class to the field:
+          y[i].className += " invalid";
+          // and set the current valid status to false
+          valid = false;
+        }
+      
+       /*if (!reg_cap.test(y[i].getAttribute("cap").value)) {
+          // add an "invalid" class to the field:
+          y[i].className += " invalid";
+          // and set the current valid status to false
+          valid = false;
+        }
+       if (!reg_indirizzo.test(y[i].getAttribute("indirizzo").value)) {
+          // add an "invalid" class to the field:
+          y[i].className += " invalid";
+          // and set the current valid status to false
+          valid = false;
+        }*/
+      }
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
