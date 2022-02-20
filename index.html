@@ -21,7 +21,9 @@
         <label for="files">Select file/s(only photos): </label>
           <input id="files" type="file" multiple/>
           <button style="float: right;" type="button" onclick="clr()">clear</button>
-          <output  id="result" ></p><br><br>
+          <canvas id="myCanvas" width="300"> 
+            <output id="result" >
+          </canvas>
       </div><br><br>
       <div class="tab"><h1>Dati Anagrafici:</h1>
         <br><br>
@@ -58,14 +60,14 @@
         <p><textarea class="texta" placeholder="Ulteriori Informazioni..." name="corso"></textarea></p>
       </div>
       <div class="tab"><h1>Certificazioni e Allegati:</h1>
-        <p><input placeholder="Certificazioni..." oninput="this.className = ''" name="certificazioni">
+        <p><input placeholder="Certificazioni..." oninput="this.className = ''" name="certificazioni"></p>  
           <br><br>
           <label for="files">Select file/s(only photos): </label>
           <input id="files" type="file" name="foto" multiple/>
           <button style="float: right;"type="button" onclick="clr()">clear</button>
           <canvas id="myCanvas" width="300"> 
             <output id="result" >
-          </canvas></p>
+          </canvas>
       </div><br><br><!-- Ora andrebbe la firma ma non so dove metterla-->
       <!--se non lo sai te-->
       <div style="overflow:auto;">

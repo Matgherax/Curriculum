@@ -140,7 +140,7 @@ window.onload = function(){
     }
         
     function clr(){
-      var myobj = document.output.getElement("div");
+      var myobj = document.getElementsByTagName("output");
       myobj.remove();
     }
 
