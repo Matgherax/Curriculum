@@ -1,5 +1,7 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
+var reg_cap = /(^[0-9]{4}+$)/;
+var reg_indirizzo = /^[a-z A-Z]{1,21}+\,[ 0-9]+$)/;
 
 function showTab(n) {
   // This function will display the specified tab of the form...
@@ -43,8 +45,6 @@ function nextPrev(n) {
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
-  var reg_cap = /(^[0-9]{4}+$)/;
-  var reg_indirizzo = /^[a-z A-Z]{1,21}+\,[ 0-9]+$)/;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
   // A loop that checks every input field in the current tab:
