@@ -43,8 +43,8 @@ function nextPrev(n) {
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
-  //const reg_cap = /(^[0-9]{4}+$)/;
-  //const reg_indirizzo = /^[a-z A-Z]{1,21}+\,[ 0-9]+$)/;
+  var reg_cap = /(^[0-9]{4}+$)/;
+  var reg_indirizzo = /^[a-z A-Z]{1,21}+\,[ 0-9]+$)/;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
   // A loop that checks every input field in the current tab:
@@ -58,7 +58,7 @@ function validateForm() {
           valid = false;
         }
       
-       /*else if (!reg_cap.test(y[i].getAttribute("cap").value)) {
+       else if (!reg_cap.test(y[i].getAttribute("cap").value)) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
@@ -71,7 +71,7 @@ function validateForm() {
           // and set the current valid status to false
           valid = false;
           alert("Ricorda di includere il numero civico separando con una virgola dall'indirizzo");
-        }*/
+        }
       
   }
   // If the valid status is true, mark the step as finished and valid:
