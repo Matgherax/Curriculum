@@ -58,7 +58,7 @@ function validateForm() {
           valid = false;
         }
       
-       else if (!reg_cap.test(y[i].getAttribute("cap").value)) {
+       /*else if (!reg_cap.test(y[i].getAttribute("cap").value)) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
@@ -71,7 +71,7 @@ function validateForm() {
           // and set the current valid status to false
           valid = false;
           alert("Ricorda di includere il numero civico separando con una virgola dall'indirizzo");
-        }
+        }*/
       
   }
   // If the valid status is true, mark the step as finished and valid:
