@@ -146,7 +146,7 @@ window.onload = function(){
 
     function generatePDF() {
       var doc = new jsPDF();  //create jsPDF object
-       doc.fromHTML(document.body, // page element which you want to print as PDF
+       doc.fromHTML(document.getElementById("regForm"), // page element which you want to print as PDF
        15,
        15, 
        {
