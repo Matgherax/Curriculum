@@ -122,7 +122,7 @@ window.onload = function(){
                         
                         div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
                                 "title='" + picFile.name + "'/>";
-                        div.style.borderRadius(80); 
+                         
                         output.insertBefore(div,null);            
                     
                     });
