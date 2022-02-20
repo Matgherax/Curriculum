@@ -43,8 +43,8 @@ function nextPrev(n) {
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
-  const reg_cap = /(^[0-9]{4}+$)/;
-  const reg_indirizzo = /^[a-z A-Z]{1,21}+\,[ 0-9]+$)/;
+  //const reg_cap = /(^[0-9]{4}+$)/;
+  //const reg_indirizzo = /^[a-z A-Z]{1,21}+\,[ 0-9]+$)/;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
   // A loop that checks every input field in the current tab:
