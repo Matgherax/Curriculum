@@ -43,33 +43,35 @@ function nextPrev(n) {
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
-  const reg_cap = new RegExp('([0-9]{4})\w');
-  const reg_indirizzo = new RegExp('([a-z A-Z]{1,21},[ 0-9])\w');
+  const reg_cap = /(^[0-9]{4}+$)/;
+  const reg_indirizzo = /^[a-z A-Z]{1,21}+\,[ 0-9]+$)/;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
         if (y[i].value == "" && y[i].getAttribute("name") != "occupazione" && y[i].getAttribute("name") != "set_professionale"
-          && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "indirizzo" && y[i].getAttribute("name") != "certificazioni" && y[i].getAttribute("indirizzo") != "foto" && currentTab != 1) {
+          && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "indirizzo" && y[i].getAttribute("name") != "certificazioni" && y[i].getAttribute("name") != "foto" && currentTab != 1) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
         }
       
-       /*if (!reg_cap.test(y[i].getAttribute("cap").value)) {
+       if (!reg_cap.test(y[i].getAttribute("cap").value)) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
+          alert('Puoi inserire solo 5 NUMERI!');
         }
        if (!reg_indirizzo.test(y[i].getAttribute("indirizzo").value)) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
-        }*/
+          alert("Ricorda di includere il numero civico separando con una virgola dall'indirizzo");
+        }
       
   }
   // If the valid status is true, mark the step as finished and valid:
