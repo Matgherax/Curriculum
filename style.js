@@ -1,7 +1,7 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
-var reg_cap = /^[0-9]{4}+$/;
-var reg_indirizzo = /^[a-z A-Z]+\,[0-9]+$/;
+//var reg_cap = /^[0-9]{4}+$/;
+//var reg_indirizzo = /^[a-z A-Z]+\,[0-9]+$/;
 
 function showTab(n) {
   // This function will display the specified tab of the form...
@@ -35,6 +35,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     // ... the form gets submitted:
     document.getElementById("regForm").submit();
+    generatePDF();
     return false;
   }
   // Otherwise, display the correct tab:
