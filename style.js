@@ -1,7 +1,7 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
-//var reg_cap = /^[0-9]{4}+$/;
-//var reg_indirizzo = /^[a-z A-Z]+\,[0-9]+$/;
+var reg_cap = /^[0-9]{4}+$/;
+var reg_indirizzo = /^[a-z A-Z]+\,[0-9]+$/;
 
 function showTab(n) {
   // This function will display the specified tab of the form...
@@ -59,20 +59,20 @@ function validateForm() {
           valid = false;
         }
       
-       /*else if (!reg_cap.test(y[i].getAttribute("cap").value)) {
+       else if (!reg_cap.test(y[i].getName("cap").value)) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
           alert('Puoi inserire solo 5 NUMERI!');
         }
-       else if (!reg_indirizzo.test(y[i].getAttribute("indirizzo").value)) {
+       else if (!reg_indirizzo.test(y[i].getName("indirizzo").value)) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
           alert("Ricorda di includere il numero civico separando con una virgola dall'indirizzo");
-        }*/
+        }
       
   }
   // If the valid status is true, mark the step as finished and valid:
