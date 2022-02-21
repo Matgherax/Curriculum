@@ -1,7 +1,7 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 const reg_cap = /^[0-9]{5}$/
-const reg_indirizzo = /^[a-z A-Z]+\,[0-9]$/
+const reg_indirizzo = /^[a-z A-Z]+\,[0-9]{1,4}$/
 
 function showTab(n) {
   // This function will display the specified tab of the form...
@@ -57,6 +57,7 @@ function validateForm() {
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
+          alert('Ricorda di riempire tutti i campi obbligatori (*)');
         }
       
        else if (!reg_cap.exec(y[i].value) && y[i].getAttribute("name") == "cap") {
