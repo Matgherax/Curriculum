@@ -59,14 +59,14 @@ function validateForm() {
           valid = false;
         }
       
-       else if (!reg_cap.test(y[i].getName("cap").value)) {
+       else if (!reg_cap.test(y[i].value) && y[i].getAttribute("name") == "cap") {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
           alert('Puoi inserire solo 5 NUMERI!');
         }
-       else if (!reg_indirizzo.test(y[i].getName("indirizzo").value)) {
+       else if (!reg_indirizzo.test(y[i].value) && y[i].getAttribute("name") == "indirizzo") {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
