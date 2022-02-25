@@ -27,22 +27,22 @@
   <div class="content">
     <form id="regForm">
       <div class="tab"><h1>Foto Personale:</h1>
-        <label for="files">Seleziona file(solo foto): </label>
+        <label for="files">Seleziona file(solo foto)*: </label>
           <input id="files" type="file" multiple/>
-          <button style="float: right;" type="button" onclick="clr()">clear</button>
-            <output id="result" >
+          <button style="float: right;" type="reset" onclick="clr()">clear</button>
+            <output id="result">
       </div><br><br>
       <div class="tab"><h1>Dati Anagrafici:</h1>
         <br><br>
-        <label>Nominativo:</label>
-        <p><input placeholder="Nome..." oninput="this.className = ''" onkeydown="this.value = this.value.toUpperCase();" name="nome"></p>
-        <p><input placeholder="Cognome..." oninput="this.className = ''" onkeydown="this.value = this.value.toUpperCase();" name="cognome"></p>
-        <label>Contatti:</label>
+        <label>Nominativo*:</label>
+        <p><input placeholder="Nome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" name="nome"></p>
+        <p><input placeholder="Cognome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" name="cognome"></p>
+        <label>Contatti*:</label>
         <p><input placeholder="Telefono..." type="tel" oninput="this.className = ''" name="telefono"></p>
         <p><input placeholder="E-mail..." type="email" oninput="this.className = ''" onkeydown="this.value = this.value.toLowerCase();" name="email"></p>
-        <label>Data di Nascita:
+        <label>Data di Nascita*:
         <p><input type="date" name="compleanno"></p></label>
-        <label>Indirizzo:</label>
+        <label>Indirizzo*:</label>
         <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo"></p>
         <p><input placeholder="00139" oninput="this.className = ''" name="cap"></p>
       </div>
@@ -58,11 +58,11 @@
         <div class="cen"><p class="dis"><input placeholder="Lavoro 3..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
         <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
       </div>
-      <div class="tab"><h1>Istruzione e Formazione:</h1>
+      <div class="tab"><h1>Istruzione e Formazione*:</h1>
         <p><textarea class="texta2" placeholder="Formazione" name="corso"></textarea></p>
         <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo"></p>
       </div>
-      <div class="tab"><h1>Capacità e competenze personali: </h1><!-- Qua mettiamo anche Ulteriori INFO-->
+      <div class="tab"><h1>Capacità e competenze personali*: </h1><!-- Qua mettiamo anche Ulteriori INFO-->
         <p><textarea class="texta" placeholder="Capacità & Competenze Personali" name="corso"></textarea></p>
         <p><textarea class="texta" placeholder="Ulteriori Informazioni..." name="corso"></textarea></p>
       </div>
@@ -71,10 +71,9 @@
           <br><br>
           <label for="files">Select file/s(only photos): </label>
           <input id="files" type="file" name="foto" multiple/>
-          <button style="float: right;"type="button" onclick="clr()">clear</button>
-          <canvas id="myCanvas"> 
-            <output id="result" >
-          </canvas>
+          <button style="float: right;" type="reset" onclick="clr()">clear</button>
+            <output id="result">
+
       </div><br><br><!-- Ora andrebbe la firma ma non so dove metterla-->
       <!--se non lo sai te-->
       <div style="overflow:auto;">
