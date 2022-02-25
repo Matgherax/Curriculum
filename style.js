@@ -124,7 +124,7 @@ window.onload = function(){
                         div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
                                 "title='" + picFile.name + "'/>";
                          
-                        output.insertBefore(div,null);            
+                                output.insertBefore(div,null);            
                     
                     });
                     
@@ -141,8 +141,9 @@ window.onload = function(){
     }
         
     function clr(){
-      var myobj = document.getElementsByTagName("output");
-      myobj.remove();
+        var output = document.getElementById("result");
+        output.value="";
+        
     }
 
     function generatePDF() {
