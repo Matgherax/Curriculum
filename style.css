@@ -128,3 +128,7 @@
     .btt{
         margin-top:4px;    
     }
+
+    output{
+        width: 100px;
+    }
