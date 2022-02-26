@@ -46,10 +46,11 @@ function nextPrev(n) {
  
 function validateForm() {
   // This function deals with validation of the form fields
-  var x, y, i, valid = true, flg = false;
+  var x, y, i, s, valid = true, flg = false;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
   z = document.getElementById("città");
+  s = document.getElementById("sesso");
   k = document.getElementById("SP");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
@@ -98,6 +99,11 @@ function validateForm() {
   if(z.value == "-" && currentTab == 1 && !flg){
     valid = false;
     alert("Inserisci la CITTA' di residenza");
+  }
+
+  if(s.value == "-" && currentTab == 1 && !flg){
+    valid = false;
+    alert("Inserisci il tuo SESSO");
   }
 
   if(k.value == "-" && currentTab == 2 && !flg){
