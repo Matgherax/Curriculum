@@ -1,10 +1,8 @@
 * {
     box-sizing: border-box;
   }
-  
-  body {
-    background-color: #f1f1f1;
-  }
+  html,body{height:  100%; margin:0; padding: 0} 
+	body{font-family: arial,sans-serif; font-size: 76%;background-color: #f1f1f1;} 
 
   .header{
     background-color: #e6eeff ;
@@ -24,7 +22,7 @@
     text-align: center;
     clear: both;
     position: relative;
-    height: 170px;
+    padding-bottom: 30px;
   }
   
 
