@@ -30,33 +30,51 @@
         <label for="files">Seleziona file(solo foto)*: </label>
           <input id="files" type="file" multiple/>
           <button type="reset" onclick="clr()" class="clr">clear</button>
-            <output id="result"> 
+          <output id="result"> 
       </div><br><br>
       <div class="tab"><h1>Dati Anagrafici:</h1>
         <br><br>
         <label>Nominativo*:</label>
-        <p><input placeholder="Nome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" name="nome"></p>
-        <p><input placeholder="Cognome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" name="cognome"></p>
+          <p><input placeholder="Nome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" name="nome"></p>
+          <p><input placeholder="Cognome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" name="cognome"></p>
+        <label>Sesso*</label>
+          <p class="sex"><input type="radio" class="r" name="r" value="M"><b>M</b>
+          <input type="radio" class="r" name="r" value="F"><b>F</b>
+				  <input type="radio" class="r" name="r" value="A"><b>LGBTQIAPK+</b></p><br><br>
         <label>Contatti*:</label>
-        <p><input placeholder="Telefono..." type="tel" oninput="this.className = ''" name="telefono"></p>
-        <p><input placeholder="E-mail..." type="email" oninput="this.className = ''" onkeyup="this.value = this.value.toLowerCase();" name="email"></p>
+          <p><input placeholder="Telefono..." type="tel" oninput="this.className = ''" name="telefono"></p>
+          <p><input placeholder="E-mail..." type="email" oninput="this.className = ''" onkeyup="this.value = this.value.toLowerCase();" name="email"></p>
         <label>Data di Nascita*:
-        <p><input type="date" name="compleanno"></p></label>
+          <p><input type="date" name="compleanno"></p></label>
         <label>Residenza*:</label>
-        <p><label for="città">Citta'*:</label>
-          <select name="città" id="città">
-            <option value="-">-</option>
-            <option value="Roma">Roma</option>
-            <option value="Napoli">Napoli</option>
-            <option value="Milano">Milano</option>
-            <option value="Pizzo Calabro">Pizzo Calabro</option>
-          </select></p>
+          <p><label for="città">Citta'*:</label>
+            <select name="città" id="città">
+              <option value="-">-</option>
+              <option value="Roma">Roma</option>
+              <option value="Napoli">Napoli</option>
+              <option value="Milano">Milano</option>
+              <option value="Pizzo Calabro">Pizzo Calabro</option>
+            </select></p>
         <div class="cen"><p class="dis"><label>Indirizzo*:</label><input placeholder="Via Roma,1" oninput="this.className = ''" name="indirizzo"></p><p class="dis"><label>CAP*:</label><input placeholder="00139" oninput="this.className = ''" name="cap"></p></div>
       </div>
       
-      <div class="tab"><h1>Tipo di ricerca*:</h1>
-        <p><input placeholder="Occupazione" oninput="this.className = ''" name="occupazione"></p>
-        <p><input placeholder="Settore professionale" oninput="this.className = ''" name="set_professionale"></p>
+      <div class="tab"><h1>Tipo di ricerca:</h1>
+        <p><input placeholder="Occupazione*" oninput="this.className = ''" name="occupazione"></p>
+        <p><label for="SP">Settore Professionale*:</label> <!--https://www.wecanjob.it/pagina9_elenco-professioni.html-->
+          <select name="SP" id="SP">
+            <option value="-">-</option>
+            <option value="Agricoltura e Ambiente">Agricoltura e Ambiente</option>
+            <option value="Costruzioni">Costruzioni</option>
+            <option value="Cultura e Spettacolo">Cultura e Spettacolo</option>
+            <option value="Finanza">Finanza</option>
+            <option value="Formazione">Formazione</option>
+            <option value="Impresa e consulenza aziendale">Impresa e consulenza aziendale</option>
+            <option value="Industria e trasporti">Industria e trasporti</option>
+            <option value="IT e Media">IT e Media</option>
+            <option value="Sanità">Sanità</option>
+            <option value="Sicurezza e Pubblica Amministrazione">Sicurezza e Pubblica Amministrazione</option>
+            <option value="Turismo e Ristorazione">Turismo e Ristorazione</option>           
+          </select></p>
       </div>
       <div class="tab"><h1>Esperienza Lavorativa:</h1>
         <div class="cen"><p class="dis"><input placeholder="Lavoro 1..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
@@ -68,7 +86,7 @@
       </div>
       <div class="tab"><h1>Istruzione e Formazione*:</h1>
         <p><textarea class="texta2" placeholder="Formazione" name="corso"></textarea></p>
-        <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo"></p>
+        <p><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo" class="d"></p>
       </div>
       <div class="tab"><h1>Capacità e competenze personali*: </h1><!-- Qua mettiamo anche Ulteriori INFO-->
         <p><textarea class="texta" placeholder="Capacità & Competenze Personali" name="corso"></textarea></p>

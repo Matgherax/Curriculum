@@ -43,18 +43,18 @@ function nextPrev(n) {
   // Otherwise, display the correct tab:
   showTab(currentTab);
 }
-
-
+ 
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true, flg = false;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
   z = document.getElementById("città");
+  k = document.getElementById("SP");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-        if (y[i].value == "" &&  y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "certificazioni" && y[i].getAttribute("name") != "foto") {
+        if (y[i].value == "" && y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "certificazioni" && y[i].getAttribute("name") != "foto") {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
@@ -92,12 +92,17 @@ function validateForm() {
           // and set the current valid status to false
           valid = false;
           alert("Inserisci correttamente la email (es. mimmo.pv@gmail.com)");
-        }
+        }    
   }
 
   if(z.value == "-" && currentTab == 1 && !flg){
     valid = false;
-    alert("Inserisci la città di residenza");
+    alert("Inserisci la CITTA' di residenza");
+  }
+
+  if(k.value == "-" && currentTab == 2 && !flg){
+    valid = false;
+    alert("Inserisci il SETTORE PROFESSIONALE");
   }
 
   // If the valid status is true, mark the step as finished and valid:
