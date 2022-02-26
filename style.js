@@ -2,6 +2,8 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 const reg_cap = /^[0-9]{5}$/
 const reg_indirizzo = /^[a-z A-Z]+\,[ 0-9]{1,4}/
+const reg_telefono = /^[0-9]{10}/
+const reg_email = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
 function showTab(n) {
   // This function will display the specified tab of the form...
@@ -45,18 +47,21 @@ function nextPrev(n) {
 
 function validateForm() {
   // This function deals with validation of the form fields
-  var x, y, i, valid = true;
+  var x, y, i, valid = true, flg = false;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-        if (y[i].value == "" &&  y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "indirizzo" && y[i].getAttribute("name") != "certificazioni" && y[i].getAttribute("name") != "foto" && currentTab != 1) {
+        if (y[i].value == "" &&  y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "indirizzo" && y[i].getAttribute("name") != "certificazioni" && y[i].getAttribute("name") != "foto" ) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
-          alert('Ricorda di riempire tutti i campi obbligatori (*)');
+          if(flg == false){
+            alert('Ricorda di riempire tutti i campi obbligatori (*)');
+            flg = true;
+          }  
         }
       
        else if (!reg_cap.exec(y[i].value) && y[i].getAttribute("name") == "cap") {
@@ -64,14 +69,28 @@ function validateForm() {
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
-          alert('Puoi inserire solo 5 NUMERI!');
+          alert('Ricorda che per il CAP devi inserire 5 NUMERI');
         }
        else if (!reg_indirizzo.exec(y[i].value) && y[i].getAttribute("name") == "indirizzo") {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
-          alert("Ricorda di includere il numero civico separando con una virgola dall'indirizzo");
+          alert("Ricorda di includere il numero civico separando con una virgola dall'INDIRIZZO (es. Via Roma, 1)");
+        }
+        else if (!reg_telefono.exec(y[i].value) && y[i].getAttribute("name") == "telefono") {
+          // add an "invalid" class to the field:
+          y[i].className += " invalid";
+          // and set the current valid status to false
+          valid = false;
+          alert("Inserisci un numero di 10 cifre (es. 111 111 1111)");
+        }
+        else if (!reg_email.exec(y[i].value) && y[i].getAttribute("name") == "email") {
+          // add an "invalid" class to the field:
+          y[i].className += " invalid";
+          // and set the current valid status to false
+          valid = false;
+          alert("inserisci correttamente la email (es. mimmo.pv@gmail.com)");
         }
       
   }
@@ -159,30 +178,4 @@ window.onload = function(){
        });
      }
 
-     function a2(img){           
-          // Set image size to 1.5 times original
-          img.style.transform = "scale(2.2)";
-          // Animation effect 
-          img.style.transition = "transform 0.25s ease";
-          img.style.top = "250px";
-          img.style.left = "550px";
-          img.style.zIndex = "5";
-          img.style.position = "fixed";
-      }
-
-      function resetImg(img) {
-          var element = document.body;
-          // Set image size to original
-          img.style.transform = "scale(1)";
-          img.style.transition = "transform 0.25s ease";
-          img.style.position = "static";
-          img.style.zIndex = "-1";
-      } 
-
-      function a(){
-      
-        var output = document.getElementById("result");
-           output.classList.toggle("modal");
-             
-      }
       
