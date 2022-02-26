@@ -10,7 +10,7 @@
     background-color: #e6eeff ;
     overflow: hidden;
     padding-bottom: 2%;
-    height: px;
+    margin: 0px auto;
   }
 
   .content{
@@ -46,7 +46,6 @@
     width: 50%;
     float:left;
     margin-left: 2%;
-    margin-top: 2%;
   }
   
   input {
