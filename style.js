@@ -158,3 +158,26 @@ window.onload = function(){
          doc.save("MyCV.pdf"); // save file name as MyCV.pdf
        });
      }
+
+     function a(img){           
+          // Set image size to 1.5 times original
+          img.style.transform = "scale(2.2)";
+          // Animation effect 
+          img.style.transition = "transform 0.25s ease";
+          img.style.top = "250px";
+          img.style.left = "550px";
+          img.style.zIndex = "5";
+          img.style.position = "fixed";
+      }
+
+      function resetImg(img) {
+          var element = document.body;
+          // Set image size to original
+          img.style.transform = "scale(1)";
+          img.style.transition = "transform 0.25s ease";
+          img.style.position = "static";
+          img.style.zIndex = "-1";
+      
+            
+      
+      } 
