@@ -50,7 +50,7 @@ function validateForm() {
   var x, y, i, valid = true, flg = false;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
-  z = x[currentTab].getElementById("città");
+  z = document.getElementById("città");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
