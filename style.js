@@ -93,16 +93,13 @@ function validateForm() {
           valid = false;
           alert("Inserisci correttamente la email (es. mimmo.pv@gmail.com)");
         }
-      
   }
 
-  if(z.value == "-"){
-    // add an "invalid" class to the field:
-    y[i].className += " invalid";
-    // and set the current valid status to false
+  if(z.value == "-" && currentTab == 1 && !flg){
     valid = false;
     alert("Inserisci la città di residenza");
   }
+
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
