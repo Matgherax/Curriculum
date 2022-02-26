@@ -126,7 +126,7 @@
   .texta2{
     width: 100%;
     height: 75px;
-    background-color: #e6eeff;
+    background-color: ;
   }
 
   .dis{
@@ -165,4 +165,9 @@
 
     label{
       font-size: large;
+    }
+
+    select{
+      background-color: #e6eeff;
+      height: 25px;
     }
