@@ -7,9 +7,10 @@
   }
 
   .header{
-    background-color: #1a1a1a;
+    background-color: #e6eeff ;
     overflow: hidden;
     padding-bottom: 2%;
+    height: px;
   }
 
   .content{
