@@ -6,14 +6,18 @@
     background-color: #f1f1f1;
   }
 
+  .content{
+    padding-bottom:60px;
+  }
+  
   .footer{
     background-color: #e6eeff ;
     color: black;
     overflow: hidden;
-    position: relative;
     text-align: center;
-    padding: 50% auto;
     clear: both;
+    position: relative;
+    height: 170px;
   }
   
 
