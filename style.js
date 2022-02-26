@@ -159,7 +159,7 @@ window.onload = function(){
        });
      }
 
-     function a(img){           
+     function a2(img){           
           // Set image size to 1.5 times original
           img.style.transform = "scale(2.2)";
           // Animation effect 
@@ -178,3 +178,11 @@ window.onload = function(){
           img.style.position = "static";
           img.style.zIndex = "-1";
       } 
+
+      function a(){
+      
+        var output = document.getElementById("result");
+           output.classList.toggle("modal");
+             
+      }
+      

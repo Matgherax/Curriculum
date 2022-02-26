@@ -155,4 +155,6 @@
       overflow: auto; /* Enable scroll if needed */
       background-color: rgb(0,0,0); /* Fallback color */
       background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      scale: 2.2;
+      transform: 0.25s ease;
     }
