@@ -162,3 +162,7 @@
         float: right;
         margin: 4px auto;
     }
+
+    label{
+      font-size: large;
+    }
