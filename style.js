@@ -194,5 +194,3 @@ window.onload = function(){
          doc.save("MyCV.pdf"); // save file name as MyCV.pdf
        });
      }
-
-      
