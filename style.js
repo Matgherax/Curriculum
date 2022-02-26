@@ -50,10 +50,11 @@ function validateForm() {
   var x, y, i, valid = true, flg = false;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
+  z = x[currentTab].getElementById("città");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-        if (y[i].value == "" &&  y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "certificazioni" && y[i].getAttribute("name") != "foto" && y[i].getElementById("città") == "-") {
+        if (y[i].value == "" &&  y[i].getAttribute("name") != "Lavoro" && y[i].getAttribute("name") != "workdays" && y[i].getAttribute("name") != "certificazioni" && y[i].getAttribute("name") != "foto") {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
@@ -90,9 +91,17 @@ function validateForm() {
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
-          alert("inserisci correttamente la email (es. mimmo.pv@gmail.com)");
+          alert("Inserisci correttamente la email (es. mimmo.pv@gmail.com)");
         }
       
+  }
+
+  if(z.value == "-"){
+    // add an "invalid" class to the field:
+    y[i].className += " invalid";
+    // and set the current valid status to false
+    valid = false;
+    alert("Inserisci la città di residenza");
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
