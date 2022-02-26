@@ -6,6 +6,12 @@
     background-color: #f1f1f1;
   }
 
+  .header{
+    background-color: #1a1a1a;
+    overflow: hidden;
+    padding-bottom: 2%;
+  }
+
   .content{
     padding-bottom:60px;
   }
@@ -33,6 +39,13 @@
   
   h1 {
     text-align: center;  
+  }
+
+  .imma{
+    width: 50%;
+    float:left;
+    margin-left: 2%;
+    margin-top: 2%;
   }
   
   input {
