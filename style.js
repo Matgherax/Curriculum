@@ -177,7 +177,4 @@ window.onload = function(){
           img.style.transition = "transform 0.25s ease";
           img.style.position = "static";
           img.style.zIndex = "-1";
-      
-            
-      
       } 
