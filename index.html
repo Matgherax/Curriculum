@@ -38,9 +38,14 @@
           <p><input placeholder="Nome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" name="nome"></p>
           <p><input placeholder="Cognome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" name="cognome"></p>
         <label>Sesso*</label>
-          <p class="sex"><input type="radio" class="r" name="r" value="M"><b>M</b>
-          <input type="radio" class="r" name="r" value="F"><b>F</b>
-				  <input type="radio" class="r" name="r" value="A"><b>LGBTQIAPK+</b></p><br><br>
+          <p class="sex">
+            <select name="città" id="città">
+              <option value="-">-</option>
+              <option value="M">M</option>
+              <option value="F">F</option>
+              <option value="LGBTQIAPK">LGBTQIAPK</option>
+            </select>
+          </p><br><br>
         <label>Contatti*:</label>
           <p><input placeholder="Telefono..." type="tel" oninput="this.className = ''" name="telefono"></p>
           <p><input placeholder="E-mail..." type="email" oninput="this.className = ''" onkeyup="this.value = this.value.toLowerCase();" name="email"></p>
@@ -83,6 +88,8 @@
         <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
         <div class="cen"><p class="dis"><input placeholder="Lavoro 3..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
         <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
+        <div id="testo"></div>
+      
       </div>
       <div class="tab"><h1>Istruzione e Formazione*:</h1>
         <p><textarea class="texta2" placeholder="Formazione" name="corso"></textarea></p>
