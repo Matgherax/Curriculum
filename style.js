@@ -185,7 +185,7 @@ window.onload = function(){
         
     function clr(){
         var output = document.getElementById("result");
-        output.value="ciao";
+        output.value=" ";
 
     }
 
