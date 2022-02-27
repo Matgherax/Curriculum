@@ -28,7 +28,7 @@
         <label for="files">Seleziona file(solo foto)*: </label>
           <input id="files" type="file">
           <button type="reset" onclick="clr()" class="clr">clear</button>
-          <output id="result">
+          <output id="result"></output>
       </div><br><br>
       <div class="tab"><h1>Dati Anagrafici:</h1>
         <br><br>
@@ -48,7 +48,7 @@
           <p><input placeholder="Telefono..." type="tel" oninput="this.className = ''" name="telefono"></p>
           <p><input placeholder="E-mail..." type="email" oninput="this.className = ''" onkeyup="this.value = this.value.toLowerCase();" name="email"></p>
         <label>Data di Nascita*:
-          <p><input type="date" name="compleanno"></p></label>
+          <input type="date" name="compleanno"></label>
         <label>Residenza*:</label>
           <p><label for="città">Citta'*:</label>
             <select name="città" id="città">
@@ -140,7 +140,7 @@
           <label for="files">Select file/s(only photos): </label>
           <input id="files" type="file" name="foto" multiple/>
           <button type="reset" onclick="clr()" class="clr">clear</button>
-            <output id="result"> 
+            <output id="result"></output>
               <br><br><br><br>
       </div>
       <div class="tab"><h1>Ulteriori Informazioni</h1>
