@@ -31,7 +31,8 @@
         <label for="files">Seleziona file(solo foto)*: </label>
           <input id="files" type="file">
           <button type="reset" onclick="clr()" class="clr">clear</button>
-          <output id="result"> 
+          <output id="result">
+            <br><br><br><br><br><br>
       </div><br><br>
       <div class="tab"><h1>Dati Anagrafici:</h1>
         <br><br>
@@ -84,14 +85,11 @@
       </div>
       <div class="tab"><h1>Esperienza Lavorativa:</h1>
         <div class="cen"><p class="dis"><input placeholder="Lavoro 1..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
-        <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
+        <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays"></p></div>
         <div class="cen"><p class="dis"><input placeholder="Lavoro 2..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
-        <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
+        <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays"></p></div>
         <div class="cen"><p class="dis"><input placeholder="Lavoro 3..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
-        <div class="cen"><p class="dis"><input type="date" name="workdays"></p><p class="dis"><input type="date" name="workdays"></p></div>
-        <div id="testo"></div>
-      
-      </div>
+        <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays"></p></div>
       <div class="tab"><h1>Istruzione e Formazione:</h1>
         <div class="cen"><p class="dis2"><label>Scuola:</label><input placeholder="es. Università Tor Vergata" oninput="this.className = ''" class="d"></p><p class="dis2"><label>Indirizzo:</label><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo" class="d"></p><p class="dis2"><label>Citta':</label><input placeholder="Roma" oninput="this.className = ''" name="citta'" class="d"></p></div>
         
@@ -148,6 +146,12 @@
             <output id="result"> 
               <br><br><br><br>
       </div>
+      <div class="tab"><h1>Ulteriori Informazioni</h1>
+        <label>Hobby:</label>
+        <input placeholder="Pittura, ecc." oninput="this.className = ''" name="certificazioni">
+        <label>Interessi Personali:</label>
+        <input placeholder="Fai da te, ecc." oninput="this.className = ''" name="certificazioni">
+      </div>
       <div class="tab"><h1>Riepilogo:</h1>
         
       </div>  
@@ -161,6 +165,7 @@
       </div>
       <!-- Circles which indicates the steps of the form: -->
       <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
