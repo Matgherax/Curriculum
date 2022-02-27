@@ -165,8 +165,7 @@ window.onload = function(){
                         
                         var div = document.createElement("div");
                         
-                        div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
-                                "title='" + picFile.name + "'/>";
+                        div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" + "title='" + picFile.name + "'/>";
                          
                                 output.insertBefore(div,null);            
                     
@@ -186,7 +185,7 @@ window.onload = function(){
         
     function clr(){
         var output = document.getElementById("result");
-        output.value="";
+        output.value="ciao";
 
     }
 
