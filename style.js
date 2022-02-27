@@ -190,12 +190,6 @@ window.onload = function(){
 
     }
 
-    function clr1(){
-      var output = document.getElementById("result1");
-      output.value="";
-
-  }
-
     function generatePDF() {
       var doc = new jsPDF();  //create jsPDF object
        doc.fromHTML(document.getElementById("regForm"), // page element which you want to print as PDF
