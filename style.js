@@ -46,13 +46,13 @@ function nextPrev(n) {
  
 function validateForm() {
   // This function deals with validation of the form fields
-  var x, y, i, s, valid = true, flg = false;
+  var x, y, z, k, i, s, valid = true, flg = false;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
   z = document.getElementById("città");
   s = document.getElementById("sesso");
   k = document.getElementById("SP");
-  sedenne = new Date();
+  var sedenne = new Date();
   sedenne = sedenne.getFullYear() - 16;
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
@@ -96,12 +96,12 @@ function validateForm() {
           valid = false;
           alert("Inserisci correttamente la email (es. mimmo.pv@gmail.com)");
         }  
-        else if (y[i].getAttribute("name") == "compleanno" && y[i].value > sedenne)  {
+        else if (y[i].getAttribute("name") == "compleanno"  && y[i].getFullYear() > sedenne)  {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
-          alert("Inserisci correttamente la email (es. mimmo.pv@gmail.com)");
+          alert("Devi avere almeno 16 anni per poter lavorare, per ora cerca di fare più esperienze possibili e ritorna in futuro");
         }  
   }
 
