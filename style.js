@@ -147,12 +147,12 @@ window.onload = function(){
         //Check File API support
         if(window.File && window.FileList && window.FileReader)
         {
-            var filesInput = document.getElementById("files");
+            var filesInput = document.getElementsByClassName("files");
             
             filesInput.addEventListener("change", function(event){
                 
                 var files = event.target.files; //FileList object
-                var output = document.getElementById("result");
+                var output = document.getElementsByClassName("result");
                 
                 for(var i = 0; i< files.length; i++)
                 {
