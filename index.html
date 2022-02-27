@@ -25,9 +25,9 @@
     <form id="regForm">
       <div class="tab"><h1>Foto Personale:</h1>
         <label for="files">Seleziona file(solo foto)*: </label>
-          <input class="files" type="file">
+          <input id="files" type="file">
           <button type="reset" onclick="clr()" class="clr">clear</button>
-          <output class="result"></output>
+          <output id="result"></output>
       </div><br><br>
       <div class="tab"><h1>Dati Anagrafici:</h1>
         <br><br>
@@ -92,7 +92,7 @@
         <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro"></p>
         <p>
           <label>Livello:</label>
-          <select name="città" class="select">
+          <select name="città">
             <option value="-">-</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
@@ -105,7 +105,7 @@
         <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro"></p>
         <p>
           <label>Livello:</label>
-          <select name="città" class="select">
+          <select name="città">
             <option value="-">-</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
@@ -118,7 +118,7 @@
         <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro"></p>
         <p>
           <label>Livello:</label>
-          <select name="città" class="select">
+          <select name="città">
             <option value="-">-</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
@@ -137,9 +137,9 @@
         <p><label>Certificazioni:</label><input placeholder="Certificazioni..." oninput="this.className = ''" name="certificazioni"></p>  
           <br><br>
           <label for="files">Select file/s(only photos): </label>
-          <input class="files" type="file" name="foto" multiple/>
+          <input id="files" type="file" name="foto" multiple/>
           <button type="reset" onclick="clr()" class="clr">clear</button>
-            <output class="result"></output>
+            <output id="result"></output>
               <br><br><br><br>
       </div>
       <div class="tab"><h1>Ulteriori Informazioni</h1>
