@@ -52,8 +52,10 @@ function validateForm() {
   z = document.getElementById("città");
   s = document.getElementById("sesso");
   k = document.getElementById("SP");
+  m = document.getElementsByClassName("select");
   var sedenne = new Date();
-  sedenne = sedenne.getFullYear() - 16;
+  sedenne.setFullYear(sedenne.getFullYear) - 16;
+  alert(sedenne);
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
@@ -96,7 +98,10 @@ function validateForm() {
           valid = false;
           alert("Inserisci correttamente la email (es. mimmo.pv@gmail.com)");
         }  
-        else if (y[i].getAttribute("name") == "compleanno"  && y[i].getFullYear() > sedenne)  {
+        else if (y[i].getAttribute("name") == "compleanno")  {
+          y[i] = new Date();
+          if(y[i].getFullYear<sedenne){
+          alert(y[i].value);}
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
@@ -112,7 +117,7 @@ function validateForm() {
 
   if(s.value == "-" && currentTab == 1 && !flg){
     valid = false;
-    alert("Inserisci il tuo SESSO");
+    alert("Inserisci il tuo SESSO"); //poco
   }
 
   if(k.value == "-" && currentTab == 2 && !flg){
