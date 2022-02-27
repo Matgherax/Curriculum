@@ -96,13 +96,13 @@ function validateForm() {
           valid = false;
           alert("Inserisci correttamente la email (es. mimmo.pv@gmail.com)");
         }  
-        else if (y[i].getAttribute("name") == "compleanno"  && y[i].getFullYear() > sedenne)  {
+        /*else if (y[i].getAttribute("name") == "compleanno"  && y[i].getFullYear() > sedenne)  {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
           alert("Devi avere almeno 16 anni per poter lavorare, per ora cerca di fare più esperienze possibili e ritorna in futuro");
-        }  
+        }  */
   }
 
   if(z.value == "-" && currentTab == 1 && !flg){
@@ -142,12 +142,12 @@ window.onload = function(){
         //Check File API support
         if(window.File && window.FileList && window.FileReader)
         {
-            var filesInput = document.getElementById("files");
+            var filesInput = document.getElementsById("files");
             
             filesInput.addEventListener("change", function(event){
                 
                 var files = event.target.files; //FileList object
-                var output = document.getElementById("result");
+                var output = document.getElementsById("result");
                 
                 for(var i = 0; i< files.length; i++)
                 {
@@ -183,6 +183,53 @@ window.onload = function(){
             console.log("Your browser does not support File API");
         }
     }
+
+    window.onload = function(){
+        
+      //Check File API support
+      if(window.File && window.FileList && window.FileReader)
+      {
+          var filesInput = document.getElementsById("files1");
+          
+          filesInput.addEventListener("change", function(event){
+              
+              var files = event.target.files; //FileList object
+              var output = document.getElementsById("result1");
+              
+              for(var i = 0; i< files.length; i++)
+              {
+                  var file = files[i];
+                  
+                  //Only pics
+                  if(!file.type.match('image'))
+                    continue;
+                  
+                  var picReader = new FileReader();
+                  
+                  picReader.addEventListener("load",function(event){
+                      
+                      var picFile = event.target;
+                      
+                      var div = document.createElement("div");
+                      
+                      div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
+                              "title='" + picFile.name + "'/>";
+                       
+                              output.insertBefore(div,null);            
+                  
+                  });
+                  
+                   //Read the image
+                  picReader.readAsDataURL(file);
+              }                               
+             
+          });
+      }
+      else
+      {
+          console.log("Your browser does not support File API");
+      }
+  }
         
     function clr(){
         var output = document.getElementById("result");
