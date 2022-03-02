@@ -202,3 +202,12 @@ window.onload = function(){
          doc.save("MyCV.pdf"); // save file name as MyCV.pdf
        });
      }
+     
+    function visualizza() {
+	    var v = document.forms["regForm"];
+	    var text = "";
+	    for (var i = 0; i < v.length -1; i++) {
+	        text += v.elements[i].value + "<br>";
+	    }
+	    document.getElementById("console").innerHTML = text;
+	}
