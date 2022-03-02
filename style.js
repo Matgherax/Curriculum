@@ -4,6 +4,7 @@ const reg_cap = /^[0-9]{5}$/
 const reg_indirizzo = /^[a-z A-Z]+\,[ 0-9]{1,4}/
 const reg_telefono = /^[0-9]{10}/
 const reg_email = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+var picReader = new FileReader();
 
 function showTab(n) {
   // This function will display the specified tab of the form...
@@ -53,7 +54,7 @@ function validateForm() {
   s = document.getElementById("sesso");
   k = document.getElementById("SP");
   var sedenne = new Date();
-  sedenne = sedenne.getFullYear() - 16;
+  sedenne.setFullYear(sedenne.getFullYear() - 16);
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
@@ -96,13 +97,13 @@ function validateForm() {
           valid = false;
           alert("Inserisci correttamente la email (es. mimmo.pv@gmail.com)");
         }  
-        /*else if (y[i].getAttribute("name") == "compleanno"  && y[i].getFullYear() > sedenne)  {
+        else if (y[i].getAttribute("name") == "compleanno"  && Date.parse(y[i].value) > sedenne) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
           valid = false;
-          alert("Devi avere almeno 16 anni per poter lavorare, per ora cerca di fare più esperienze possibili e ritorna in futuro");
-        }  */
+          alert("Devi avere almeno 16 anni per poter lavorare, per ora cerca di fare piu' esperienze possibili e ritorna in futuro");
+        }  
   }
 
   if(z.value == "-" && currentTab == 1 && !flg){
@@ -157,7 +158,7 @@ window.onload = function(){
                     if(!file.type.match('image'))
                       continue;
                     
-                    var picReader = new FileReader();
+                    
                     
                     picReader.addEventListener("load",function(event){
                         
@@ -205,9 +206,16 @@ window.onload = function(){
      
     function visualizza() {
 	    var v = document.forms["regForm"];
+      var output = document.getElementsByClassName("result");
 	    var text = "";
 	    for (var i = 0; i < v.length -1; i++) {
-	        text += v.elements[i].value + "<br>";
+          if(i == 0){
+            var label1 = document.createElement("label");
+            label1.innerHTML = "Foto Personale:";
+            var img = output;
+	          document.getElementById("Riep").appendChild(label1);
+          }
+          text += v.elements[i].value + "<br>";
 	    }
 	    document.getElementById("console").innerHTML = text;
 	}
