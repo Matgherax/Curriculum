@@ -204,13 +204,18 @@ window.onload = function(){
        });
      }
      
-  $("#btnPrint").live("click", function () {
-    var divContents = $("#text").html();
-    var printWindow = window.open('', '', 'height=400,width=800');
-    printWindow.document.write('<html><head><title>Html to PDF</title>');
-    printWindow.document.write('</head><body>');
-    printWindow.document.write(text);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-    printWindow.print();
-  });
+    function visualizza() {
+	    var v = document.forms["regForm"];
+      var output = document.getElementsByClassName("result");
+	    var text = "";
+	    for (var i = 0; i < v.length -1; i++) {
+          if(i == 0){
+            var label1 = document.createElement("label");
+            label1.innerHTML = "Foto Personale:";
+            var img = output;
+	          document.getElementById("Riep").appendChild(label1);
+          }
+          text += v.elements[i].value + "<br>";
+	    }
+	    document.getElementById("console").innerHTML = text;
+	}
