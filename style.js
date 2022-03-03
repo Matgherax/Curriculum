@@ -41,6 +41,7 @@ function nextPrev(n) {
     var email = document.createElement("a");
     email.href = "mailto:memoli.d@pacinottiarchimede.edu.it";   //mailto
     email.click()
+    currentTab = 0;
     return false;
   }
   // Otherwise, display the correct tab:
@@ -99,7 +100,7 @@ function validateForm() {
           valid = false;
           alert("Inserisci correttamente la email (es. mimmo.pv@gmail.com)");
         }  
-        else if (y[i].getAttribute("name") == "compleanno"  && Date.parse(y[i].value) > sedenne) {
+        else if (y[i].getAttribute("name") == "compleanno" && Date.parse(y[i].value) > sedenne) {
           // add an "invalid" class to the field:
           y[i].className += " invalid";
           // and set the current valid status to false
@@ -112,6 +113,7 @@ function validateForm() {
     valid = false;
     alert("Inserisci la CITTA' di residenza");
   }
+
 
   if(s.value == "-" && currentTab == 1 && !flg){
     valid = false;
@@ -195,6 +197,3 @@ window.onload = function(){
         var output = document.getElementById("result");
         output.value=" ";
     }
-
-     
-    

@@ -63,7 +63,7 @@
       </div>
       
       <div class="tab" id="ricerca"><h1>Tipo di ricerca:</h1>
-        <p><label>Occupazione*:</label><input placeholder="Occupazione" oninput="this.className = ''" name="occupazione"></p>
+        <p><label>Occupazione*:</label><input placeholder="Occupazione per la quale si concorre/posizione ricoperta/posizione desiderata" oninput="this.className = ''" name="occupazione"></p>
         <p><label for="SP">Settore Professionale*:</label> <!--https://www.wecanjob.it/pagina9_elenco-professioni.html-->
           <select name="SP" id="SP">
             <option value="-">-</option>
@@ -89,12 +89,22 @@
         <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays"></p></div>
       </div>
       <div class="tab" id="istruzione"><h1>Istruzione e Formazione:</h1>
-        <div class="cen"><p class="dis2"><label>Scuola*:</label><input placeholder="Universita' Tor Vergata" oninput="this.className = ''" class="d"></p><p class="dis2"><label>Indirizzo*:</label><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo" class="d"></p><p class="dis2"><label>Citta'*:</label><input placeholder="Roma" oninput="this.className = ''" name="citta'" class="d"></p></div>
+        <div class="cen"><p class="dis2"><label>Diploma <br>(Ultimo conseguito)*:</label><input placeholder="Universita' Tor Vergata" oninput="this.className = ''" class="d"></p>
+          <p class="dis2"><label>Indirizzo*:</label><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo" class="d"></p>
+          <p class="dis2"><label for="città">Citta':</label><br>
+            <select name="città" id="città">
+              <option value="-">-</option>
+              <option value="Roma">Roma</option>
+              <option value="Napoli">Napoli</option>
+              <option value="Milano">Milano</option>
+              <option value="Pizzo Calabro">Pizzo Calabro</option>
+            </select></p>
+        </div>
         
         <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro"></p>
         <p>
           <label>Livello:</label>
-          <select name="città" >
+          <select name="certificato" >
             <option value="-">-</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
@@ -107,7 +117,7 @@
         <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro"></p>
         <p>
           <label>Livello:</label>
-          <select name="città" >
+          <select name="certificato" >
             <option value="-">-</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
@@ -120,7 +130,7 @@
         <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro"></p>
         <p>
           <label>Livello:</label>
-          <select name="città" >
+          <select name="certificato" >
             <option value="-">-</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
@@ -135,23 +145,25 @@
         <p><textarea class="texta" placeholder="Capacita' & Competenze Personali" name="corso"></textarea></p>
         <p><textarea class="texta" placeholder="Ulteriori Informazioni..." name="corso"></textarea></p>
       </div>
+      <div class="tab" id="infoaggg"><h1>Ulteriori Informazioni</h1>
+        <label>Hobby:</label>
+        <input placeholder="es. Pittura, ecc." oninput="this.className = ''" name="certificazioni">
+        <br><br>
+        <label>Interessi Personali:</label>
+        <input placeholder="es. Fai da te, ecc." oninput="this.className = ''" name="certificazioni">
+      </div>
       <div class="tab" id="ccna"><h1>Certificazioni e Allegati:</h1>
         <p><label>Certificazioni:</label><input placeholder="Certificazioni..." oninput="this.className = ''" name="certificazioni"></p>  
           <br><br>
-          <label for="files">Select file/s(only photos): </label>
-          <input id="files1" type="file">
-          <button type="reset" onclick="clr()" class="clr">clear</button>
-              <br><br><br><br>
-      </div>
-      <div class="tab" id="infoaggg"><h1>Ulteriori Informazioni</h1>
-        <label>Hobby:</label>
-        <input placeholder="Pittura, ecc." oninput="this.className = ''" name="certificazioni">
-        <br><br>
-        <label>Interessi Personali:</label>
-        <input placeholder="Fai da te, ecc." oninput="this.className = ''" name="certificazioni">
-        <br><br><br><br>
-        <button class="clr2" onClick="window.location.reload(true);">Reset</input>
-        <br><br><br><br><br><br>
+          <div id="thumbnail">
+            <label for="files">Select file/s(only photos): </label>
+            <input id="files" type="file">
+            <br><br><br><br>
+            <button class="clr2" onClick="window.location.reload(true);">Reset</input>
+            <br><br><br><br><br><br>
+            <button type="reset" onclick="clr()" class="clr">clear</button>
+            <output id="result"></output> <br><br><br><br>
+            </div>  
       </div>
       <br><br><!-- Ora andrebbe la firma ma non so dove metterla-->
       <!--se non lo sai te-->
@@ -163,14 +175,14 @@
       </div>
       <!-- Circles which indicates the steps of the form: -->
       <div style="text-align:center;margin-top:40px;">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
+        <span class="step"></span> <!-- 0 - Foto Personale-->
+        <span class="step"></span> <!-- 1 - Dati Anagrafici-->
+        <span class="step"></span> <!-- 2 - Tipo Ricerca-->
+        <span class="step"></span> <!-- 3 - Esperienza Lavorativa-->
+        <span class="step"></span> <!-- 4 - Istruzione e Formazione-->
+        <span class="step"></span> <!-- 5 - Capacità ed Esperienze Personali-->
+        <span class="step"></span> <!-- 6 - Ulteriori Informazioni-->
+        <span class="step"></span> <!-- 7 - Certificati e Allegati-->
       </div>
     </form>
   </div>
