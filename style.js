@@ -190,18 +190,5 @@ window.onload = function(){
 
     }
 
-    function generatePDF() {
-      var doc = new jsPDF();  //create jsPDF object
-       doc.fromHTML(document.getElementById("regForm"), // page element which you want to print as PDF
-       15,
-       15, 
-       {
-         'width': 170  //set width
-       },
-       function(a) 
-        {
-         doc.save("MyCV.pdf"); // save file name as MyCV.pdf
-       });
-     }
      
     
