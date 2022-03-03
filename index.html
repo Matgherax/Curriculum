@@ -43,20 +43,20 @@
             </select>
           </p>
         <label>Contatti*:</label>
-          <p><input placeholder="Telefono..." type="tel" id="telefono" oninput="this.className = ''" name="telefono"></p>
-          <p><input placeholder="E-mail..." type="email" id="email" oninput="this.className = ''" onkeyup="this.value = this.value.toLowerCase();" name="email"></p>
+          <p><input placeholder="Telefono..." type="tel" oninput="this.className = ''" name="telefono"></p>
+          <p><input placeholder="E-mail..." type="email" oninput="this.className = ''" onkeyup="this.value = this.value.toLowerCase();" name="email"></p>
         <p><label>Data di Nascita*:
-          <input type="date" name="compleanno" id="compleanno"></label></p>
+          <input type="date" name="compleanno"></label></p>
         <label>Residenza*:</label>
           <p><label for="città">Citta'*:</label>
-            <select name="città" id="citta">
+            <select name="città" id="città">
               <option value="-">-</option>
               <option value="Roma">Roma</option>
               <option value="Napoli">Napoli</option>
               <option value="Milano">Milano</option>
               <option value="Pizzo Calabro">Pizzo Calabro</option>
             </select></p>
-        <div class="cen"><p class="dis"><label>Indirizzo*:</label><input placeholder="Via Roma,1" oninput="this.className = ''" name="indirizzo" id="indirizzo"></p><p class="dis"><label>CAP*:</label><input placeholder="00139" oninput="this.className = ''" name="cap" id="cap"></p></div>
+        <div class="cen"><p class="dis"><label>Indirizzo*:</label><input placeholder="Via Roma,1" oninput="this.className = ''" name="indirizzo"></p><p class="dis"><label>CAP*:</label><input placeholder="00139" oninput="this.className = ''" name="cap"></p></div>
       </div>
       
       <div class="tab" id="ricerca"><h1>Tipo di ricerca:</h1>
@@ -78,18 +78,18 @@
           </select></p>
       </div>
       <div class="tab" id="esperienza"><h1>Esperienza Lavorativa:</h1>
-        <div class="cen"><p class="dis"><input placeholder="Lavoro 1..." oninput="this.className = ''" name="Lavoro" id="lavoro1"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro" id="presso1"></p></div>
-        <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays" id="datai1"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays" id="dataf1"></p></div>
-        <div class="cen"><p class="dis"><input placeholder="Lavoro 2..." oninput="this.className = ''" name="Lavoro" id="lavoro2"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro" id="presso2"></p></div>
-        <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays" id="datai2"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays" id="dataf2"></p></div>
-        <div class="cen"><p class="dis"><input placeholder="Lavoro 3..." oninput="this.className = ''" name="Lavoro" id="lavoro3"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro" id="presso3"></p></div>
-        <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays" id="datai3"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays" id="dataf3"></p></div>
+        <div class="cen"><p class="dis"><input placeholder="Lavoro 1..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
+        <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays"></p></div>
+        <div class="cen"><p class="dis"><input placeholder="Lavoro 2..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
+        <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays"></p></div>
+        <div class="cen"><p class="dis"><input placeholder="Lavoro 3..." oninput="this.className = ''" name="Lavoro"></p><p class="dis"><input placeholder="Presso..." oninput="this.className = ''" name="Lavoro"></p></div>
+        <div class="cen"><p class="dis"><label>Data Inizio:</label><input type="date" name="workdays"></p><p class="dis"><label>Data Fine:</label><input type="date" name="workdays"></p></div>
       </div>
       <div class="tab" id="istruzione"><h1>Istruzione e Formazione:</h1>
-        <div class="cen"><p class="dis2"><label>Scuola*:</label><input placeholder="Universita' Tor Vergata" oninput="this.className = ''" class="d" id="scuola"></p>
-        <p class="dis2"><label>Indirizzo*:</label><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo" class="d" id="indirizzosc"></p>
+        <div class="cen"><p class="dis2"><label>Scuola*:</label><input placeholder="Universita' Tor Vergata" oninput="this.className = ''" class="d"></p>
+        <p class="dis2"><label>Indirizzo*:</label><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo" class="d"></p>
         <p class="dis2"><label for="città">Citta'*:</label>
-          <select name="città" id="cittasc">
+          <select name="città" id="città">
             <option value="-">-</option>
             <option value="Roma">Roma</option>
             <option value="Napoli">Napoli</option>
@@ -98,10 +98,10 @@
           </select></p>
         </DIV>
         
-        <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro" id="lingua1"></p>
+        <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro"></p>
         <p>
           <label>Livello:</label>
-          <select name="livello" id="livello1">
+          <select name="città" >
             <option value="-">-</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
@@ -111,10 +111,10 @@
             <option value="C2">C2</option>
         </select>
       </p>        
-        <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro" id="lingua2"></p>
+        <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro"></p>
         <p>
           <label>Livello:</label>
-          <select name="livello" id="livello2">
+          <select name="città" >
             <option value="-">-</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
@@ -124,10 +124,10 @@
             <option value="C2">C2</option>
         </select>
       </p>   
-        <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro" id="lingua3"></p>
+        <p><label>Certificazione Linguistica in:</label><input placeholder="Lingua..." oninput="this.className = ''" name="Lavoro"></p>
         <p>
           <label>Livello:</label>
-          <select name="livello" id="livello3">
+          <select name="città" >
             <option value="-">-</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>
@@ -139,21 +139,21 @@
       </p>
       </div>
       <div class="tab" id="capacita"><h1>Capacita' e competenze personali: </h1><!-- Qua mettiamo anche Ulteriori INFO-->
-        <p><textarea class="texta" placeholder="Capacita' & Competenze Personali" name="corso" id="capacita"></textarea></p>
-        <p><textarea class="texta" placeholder="Ulteriori Informazioni..." name="corso" id="altro"></textarea></p>
+        <p><textarea class="texta" placeholder="Capacita' & Competenze Personali" name="corso"></textarea></p>
+        <p><textarea class="texta" placeholder="Ulteriori Informazioni..." name="corso"></textarea></p>
       </div>
       <div class="tab" id="infoaggg"><h1>Ulteriori Informazioni</h1>
         <label>Hobby:</label>
-        <input placeholder="Pittura, ecc." oninput="this.className = ''" name="certificazioni" id="hobby">
+        <input placeholder="Pittura, ecc." oninput="this.className = ''" name="certificazioni">
         <br><br>
         <label>Interessi Personali:</label>
-        <input placeholder="Fai da te, ecc." oninput="this.className = ''" name="certificazioni" id="interessi">
+        <input placeholder="Fai da te, ecc." oninput="this.className = ''" name="certificazioni">
       </div>
       <div class="tab" id="ccna"><h1>Certificazioni e Allegati:</h1>
         <p><label>Certificazioni:</label><input placeholder="Certificazioni..." oninput="this.className = ''" name="certificazioni"></p>  
           <br><br>
           <label for="files">Select file/s(only photos): </label>
-          <input id="files1" type="file" id="certificazioni">
+          <input id="files1" type="file">
           <button type="reset" onclick="clr()" class="clr">clear</button>
           <output id="result"></output>
               <br><br><br><br>
