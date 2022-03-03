@@ -38,7 +38,9 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     // ... the form gets submitted:
     document.getElementById("regForm").submit();
-    generatePDF();
+    var email = document.createElement("a");
+    email.href = "mailto:memoli.d@pacinottiarchimede.edu.it";   //mailto
+    email.click()
     return false;
   }
   // Otherwise, display the correct tab:
@@ -192,7 +194,6 @@ window.onload = function(){
     function clr(){
         var output = document.getElementById("result");
         output.value=" ";
-
     }
 
      

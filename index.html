@@ -21,7 +21,7 @@
       <img class="imma" alt="CV" src="CV.png"> 
   </div>
   <div class="content">
-    <form id="regForm"  action="mailto:memoli.d@pacinottiarchimede.edu.it">
+    <form id="regForm">
       <div class="tab" id="foto"><h1>Foto Personale:</h1>
         <div id="thumbnail">
           <label for="files">Seleziona file(solo foto)*: </label>
@@ -149,11 +149,10 @@
         <br><br>
         <label>Interessi Personali:</label>
         <input placeholder="Fai da te, ecc." oninput="this.className = ''" name="certificazioni">
+        <br><br><br><br>
+        <button class="clr2" onClick="window.location.reload(true);">Reset</input>
+        <br><br><br><br><br><br>
       </div>
-      <div class="tab"><h1>Riepilogo:</h1>
-        <button onclick="visualizza()">Visualizza</button>
-        <p id="console"></p>
-      </div>  
       <br><br><!-- Ora andrebbe la firma ma non so dove metterla-->
       <!--se non lo sai te-->
       <div style="overflow:auto;">
@@ -164,7 +163,6 @@
       </div>
       <!-- Circles which indicates the steps of the form: -->
       <div style="text-align:center;margin-top:40px;">
-        <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>

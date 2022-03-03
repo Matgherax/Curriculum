@@ -168,6 +168,13 @@
     float: right;
     margin: 4px auto;
   }
+
+  .clr2{
+    float: left;
+    margin: 4px auto;
+    height: 40px;
+    background-color:firebrick;
+  }   
    
   label{
      font-size: large;
