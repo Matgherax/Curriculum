@@ -204,13 +204,72 @@ window.onload = function(){
        });
      }
      
-  $("#btnPrint").live("click", function () {
-    var divContents = $("#text").html();
-    var printWindow = window.open('', '', 'height=400,width=800');
-    printWindow.document.write('<html><head><title>Html to PDF</title>');
-    printWindow.document.write('</head><body>');
-    printWindow.document.write(text);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-    printWindow.print();
-  });
+     let saveFile = () => {
+    	
+      // Get the data from each element on the form.
+      const nome = document.getElementById('nome');
+      const cognome = document.getElementById('cognome');
+      const sesso = document.getElementById('sesso');
+      const telefono = document.getElementById('telefono');
+      const email = document.getElementById('email');
+      const compleanno = document.getElementById('compleanno');
+      const citta = document.getElementById('città');
+      const indirizzo = document.getElementById('indirizzo');
+      const cap = document.getElementById('cap');
+      const ricerca = document.getElementById('ricerca');
+      const sp = document.getElementById('sp');
+      const esperienza = document.getElementById('esperienza');
+      const istruzione = document.getElementById('istruzione');
+      const lavoro1 = document.getElementById('lavoro1');
+      const presso1 = document.getElementById('presso1');
+      const datai1 = document.getElementById('datai1');
+      const datadf1 = document.getElementById('dataf1');
+      const lavoro2 = document.getElementById('lavoro2');
+      const presso2 = document.getElementById('presso2');
+      const datai2 = document.getElementById('datai2');
+      const dataf2 = document.getElementById('dataf2');
+      const lavoro3 = document.getElementById('lavoro3');
+      const presso3 = document.getElementById('presso3');
+      const datai3 = document.getElementById('datai3');
+      const dataf3 = document.getElementById('dataf3');
+      const scuola = document.getElementById('scuola');
+      const indirizzosc = document.getElementById('indirizzosc');
+      const cittasc = document.getElementById('cittasc');
+      const città = document.getElementById('città');
+      const lingua1 = document.getElementById('lingua1');
+      const livello1 = document.getElementById('livello1');
+      const lingua2 = document.getElementById('lingua2');
+      const livello2 = document.getElementById('livello2');
+      const lingua3 = document.getElementById('lingua3');
+      const livello3 = document.getElementById('livello3');
+      const  = document.getElementById('capacita');
+      const  = document.getElementById('altro');
+      const  = document.getElementById('certificazioni');
+      const  = document.getElementById('files1');
+      
+      // This variable stores all the data.
+      let data = 
+          '\r Name: ' + name.value + ' \r\n ' + 
+          'Age: ' +age.value + ' \r\n ' + 
+          'Email: ' + email.value + ' \r\n ' + 
+          'Country: ' + country.value + ' \r\n ' + 
+          'Message: ' + msg.value;
+      
+      // Convert the text to BLOB.
+      const textToBLOB = new Blob([data], { type: 'text/plain' });
+      const sFileName = 'formData.txt';	   // The file to save the data.
+
+      let newLink = document.createElement("a");
+      newLink.download = sFileName;
+
+      if (window.webkitURL != null) {
+          newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+      }
+      else {
+          newLink.href = window.URL.createObjectURL(textToBLOB);
+          newLink.style.display = "none";
+          document.body.appendChild(newLink);
+      }
+
+      newLink.click(); 
+  }
