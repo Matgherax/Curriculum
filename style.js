@@ -203,21 +203,3 @@ window.onload = function(){
        });
      }
      
-    function visualizza() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-	    var v = document.forms["regForm"]; 
-      var output = document.getElementsByClassName("result");
-      var output = document.getElementsById("result");
-=======
-	    var v = document.forms["regForm"];
->>>>>>> parent of f9cedd1 (controlli extra, fixes e inizio pdf)
-=======
-	    var v = document.forms["regForm"];
->>>>>>> parent of f9cedd1 (controlli extra, fixes e inizio pdf)
-	    var text = "";
-	    for (var i = 0; i < v.length -1; i++) {
-	        text += v.elements[i].value + "<br>";
-	    }
-	    document.getElementById("console").innerHTML = text;
-	}
