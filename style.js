@@ -205,12 +205,9 @@ window.onload = function(){
      }
      
     function visualizza() {
-	    var v = document.forms["regForm"];
-<<<<<<< HEAD
+	    var v = document.forms["regForm"]; 
       var output = document.getElementsByClassName("result");
-=======
       var output = document.getElementsById("result");
->>>>>>> parent of fe0ffc2 (pdf prova)
 	    var text = "";
 	    for (var i = 0; i < v.length -1; i++) {
           if(i == 0){
