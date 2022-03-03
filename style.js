@@ -242,17 +242,17 @@ window.onload = function(){
       const livello2 = document.getElementById('livello2');
       const lingua3 = document.getElementById('lingua3');
       const livello3 = document.getElementById('livello3');
-      const capacita = document.getElementById('capacita');
-      const altro = document.getElementById('altro');
-      const certificazioni = document.getElementById('certificazioni');
-      const files1 = document.getElementById('files1');
-
+      const  = document.getElementById('capacita');
+      const  = document.getElementById('altro');
+      const  = document.getElementById('certificazioni');
+      const  = document.getElementById('files1');
+      
       // This variable stores all the data.
       let data = 
-          '\r Nome: ' + nome.value + ' \r\n ' + 
-          'Eta: '  + compleanno.value + ' \r\n ' + 
+          '\r Name: ' + name.value + ' \r\n ' + 
+          'Age: ' +age.value + ' \r\n ' + 
           'Email: ' + email.value + ' \r\n ' + 
-          ' ' + country.value + ' \r\n ' + 
+          'Country: ' + country.value + ' \r\n ' + 
           'Message: ' + msg.value;
       
       // Convert the text to BLOB.
