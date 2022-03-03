@@ -41,6 +41,7 @@ function nextPrev(n) {
     var email = document.createElement("a");
     email.href = "mailto:memoli.d@pacinottiarchimede.edu.it";   //mailto
     email.click()
+    alert("CV inviato con Successo.");
     currentTab = 0;
     return false;
   }
@@ -113,7 +114,6 @@ function validateForm() {
     valid = false;
     alert("Inserisci la CITTA' di residenza");
   }
-
 
   if(s.value == "-" && currentTab == 1 && !flg){
     valid = false;
