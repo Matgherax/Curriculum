@@ -23,10 +23,13 @@
   <div class="content">
     <form id="regForm"  action="mailto:memoli.d@pacinottiarchimede.edu.it">
       <div class="tab" id="foto"><h1>Foto Personale:</h1>
-        <label for="files">Seleziona file(solo foto)*: </label>
+        <div id="thumbnail">
+          <label for="files">Seleziona file(solo foto)*: </label>
           <input id="files" type="file">
           <button type="reset" onclick="clr()" class="clr">clear</button>
           <output id="result"></output>
+        </div>
+        
       </div><br><br>
       <div class="tab" id="anagrafici"><h1>Dati Anagrafici:</h1>
         <br><br>
