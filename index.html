@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Curriculum Pacinotti</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="title" content="curriculumpacinotti">
 <meta name="description" content="">
@@ -12,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">   <!--Favicon-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
-<style type="text/css"> @import url(style.css);</style>
+<style> @import url(style.css);</style>
 </head>
 
 <body>
@@ -92,7 +93,7 @@
         <div class="cen"><p class="dis2"><label>Diploma <br>(Ultimo conseguito)*:</label><input placeholder="Universita' Tor Vergata" oninput="this.className = ''" class="d"></p>
           <p class="dis2"><label>Indirizzo*:</label><input placeholder="Via Roma, 30" oninput="this.className = ''" name="indirizzo" class="d"></p>
           <p class="dis2"><label for="città">Citta':</label><br>
-            <select name="città" id="città">
+            <select name="città" id="citta">
               <option value="-">-</option>
               <option value="Roma">Roma</option>
               <option value="Napoli">Napoli</option>
@@ -155,14 +156,14 @@
       <div class="tab" id="ccna"><h1>Certificazioni e Allegati:</h1>
         <p><label>Certificazioni:</label><input placeholder="Certificazioni..." oninput="this.className = ''" name="certificazioni"></p>  
           <br><br>
-          <div id="thumbnail">
+          <div>
             <label for="files">Select file/s(only photos): </label>
-            <input id="files" type="file">
+            <input type="file">
             <br><br><br><br>
-            <button class="clr2" onClick="window.location.reload(true);">Reset</input>
+            <button class="clr2" onClick="window.location.reload(true);">Reset</button>
             <br><br><br><br><br><br>
             <button type="reset" onclick="clr()" class="clr">clear</button>
-            <output id="result"></output> <br><br><br><br>
+            <br><br><br><br>
             </div>  
       </div>
       <br><br><!-- Ora andrebbe la firma ma non so dove metterla-->
@@ -192,6 +193,6 @@
     <p> Di Salvatore Matteo, De Martino Diego, Memoli Davide</p>
   </div>
 </div>
-<script type="text/javascript" src="style.js"></script>
+<script src="style.js"></script>
 </body>
 </html>
