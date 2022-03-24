@@ -23,7 +23,7 @@
       <img class="imma" alt="CV" src="CV.png"> 
   </div>
   <div class="content">
-    <form id="regForm">
+    <form id="regForm" method="POST" action="./Php.php">
       <div class="tab" id="foto"><h1>Foto Personale:</h1>
         <div id="thumbnail">
           <label for="files">Seleziona file(solo foto)*: </label>
@@ -36,8 +36,8 @@
       <div class="tab" id="anagrafici"><h1>Dati Anagrafici:</h1>
         <br><br>
         <label>Nominativo*:</label>
-          <p><input placeholder="Nome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" id="nome"></p>
-          <p><input placeholder="Cognome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" id="cognome"></p>
+          <p><input placeholder="Nome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" id="nome" name="nome"></p>
+          <p><input placeholder="Cognome..." oninput="this.className = ''" onkeyup="this.value = this.value.toUpperCase();" id="cognome" name="cognome"></p>
         <label>Sesso*</label>
           <p class="sex">
             <select name="sesso" id="sesso">
