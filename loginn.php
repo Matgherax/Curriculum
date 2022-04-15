@@ -37,7 +37,17 @@
     $nick = $_POST["nick"];
     $pw = $_POST["pw"];
 
-    
+    $sql = "SELECT * FROM Logino WHERE nick = $nick AND pw = $pw;";
+
+    $conn -> query($sql);
+    $result = $conn -> query($sql);
+
+    if(query($sql) === TRUE){
+        echo "<br> Nome usato<br>" 
+    }else{
+        $sql = "INSERT INTO Logino VALUES ($nick, $pw);";
+        $conn -> query($sql);
+    }
     ?>
 </body>
 </html>
